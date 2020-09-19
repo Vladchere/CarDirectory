@@ -17,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8609B2D32516316100B99B25 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8649C6EB2514E6F5002C1243 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		8649C6ED2514EEEE002C1243 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		86A86B082513A524007440F9 /* CarDirectory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarDirectory.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +43,7 @@
 		86A86AFF2513A524007440F9 = {
 			isa = PBXGroup;
 			children = (
+				8609B2D32516316100B99B25 /* README.md */,
 				86A86B0A2513A524007440F9 /* CarDirectory */,
 				86A86B092513A524007440F9 /* Products */,
 			);
