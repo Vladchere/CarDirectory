@@ -32,6 +32,7 @@ class StorageManager {
     
     func fetchData() -> [Car] {
         let fetchRequest: NSFetchRequest<Car> = Car.fetchRequest()
+        setDefaultCars()
         
         do {
             return try viewContext.fetch(fetchRequest)
@@ -78,6 +79,22 @@ class StorageManager {
     func delete(_ car: Car) {
         viewContext.delete(car)
         saveContext()
+    }
+    
+    //MARK: - Private methods
+    private func setDefaultCars() {
+        let userDefaults = UserDefaults.standard
+        let defaultValues = ["firstRun" : true]
+        userDefaults.register(defaults: defaultValues)
+
+        if userDefaults.bool(forKey: "firstRun") {
+            
+            save(carManufacturer: "Toyota", carModel: "Corolla", carYear: "2019", carBody: "Sedan") { _ in }
+            save(carManufacturer: "Toyota", carModel: "Camry", carYear: "2020", carBody: "Sedan") { _ in }
+            save(carManufacturer: "Honda", carModel: "Accord", carYear: "2018", carBody: "Sedan") { _ in }
+
+            userDefaults.set(false, forKey: "firstRun")
+        }
     }
     
     // MARK: - Core Data Saving support
